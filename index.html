@@ -139,6 +139,62 @@
       </section>
     </main>
 
+    <section id="products-section" class="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+  <div class="text-center">
+    <h2 class="text-3xl font-extrabold sm:text-4xl">Premium Digital Tools</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-softGray sm:text-base">
+      Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
+    </p>
+  </div>
+
+  <div class="mt-8 flex items-center justify-center">
+    <div class="inline-flex rounded-full bg-white p-1 shadow-card">
+      <button id="products-tab" class="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white">Products</button>
+      <button id="cart-tab" class="rounded-full px-5 py-2 text-sm font-semibold text-gray-600 transition hover:text-brand">Cart (<span id="tab-cart-count">0</span>)</button>
+    </div>
+  </div>
+
+  <div id="products-view" class="mt-10">
+    <div id="products-grid" class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+  </div>
+
+  <div id="cart-view" class="mt-10 hidden">
+    <div class="bg-white">
+      <div class="mb-10 flex items-center justify-between gap-4">
+        <h3 class="text-[32px] font-extrabold text-textDark">Your Cart</h3>
+        <span id="cart-status" class="hidden text-sm text-softGray">No products selected yet.</span>
+      </div>
+
+      <div
+        id="empty-cart-message"
+        class="flex min-h-[260px] flex-col items-center justify-center rounded-2xl border border-[#f1f1f1] bg-white text-center"
+      >
+        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.2 2.4A1 1 0 007 17h12m-9 4a1 1 0 100-2 1 1 0 000 2zm8 1a1 1 0 100-2 1 1 0 000 2z" />
+          </svg>
+        </div>
+        <p class="text-base font-medium text-gray-400">Your cart is empty</p>
+      </div>
+
+      <div id="cart-items" class="hidden space-y-4"></div>
+
+      <div class="mt-10 border-t border-line pt-8">
+        <div class="mb-6 flex items-center justify-between">
+          <span class="text-[18px] font-bold text-textDark">Total:</span>
+          <span id="cart-total" class="text-[22px] font-extrabold text-textDark">$0</span>
+        </div>
+        <button
+          id="checkout-button"
+          class="w-full rounded-full bg-gradient-to-r from-[#7c3aed] to-[#8b3dff] px-6 py-4 text-base font-semibold text-white transition hover:opacity-95"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
     <script src="script.js"></script>
   </body>
 </html>
